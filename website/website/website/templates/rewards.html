@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}My Account{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h2>Your Rewards</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card text-center">
+                <div class="card-header">
+                    Points Balance
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">1,200 Points</h5>
+                    <p class="card-text">Your current points total.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    Available Rewards
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">Free Coffee (200 Points)</li>
+                    <li class="list-group-item">Discount Coupon - $10 off (400 Points)</li>
+                    <li class="list-group-item">Free Product (800 Points)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mt-4">
+        <button class="btn btn-primary" type="button">Redeem Rewards</button>
+    </div>
+</div>
+{% endblock %}

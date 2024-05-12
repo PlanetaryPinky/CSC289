@@ -1,0 +1,119 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content%}
+    <h1 align="center">Welcome {{user.first_name}} {{user.last_name}}</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Quick Access Buttons</title>
+        <style>
+            .button-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 10px;
+                padding: 20px;
+            }
+            .file-button {
+                width: 100px;
+                height: 100px;
+                background-color: ;
+                color: black;
+                border-style: solid;
+                border-radius: 10px;
+                border-color: black;
+                padding: 10px;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                text-decoration: none;
+            }
+            .file-icon {
+                font-size: 30px; /* Icon size */
+                margin-bottom: 10px;
+            }
+        </style>
+    </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Interactive Banking Dashboard</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <style>
+            body {
+                font-family: 'Roboto', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f7fa;
+                color: #333;
+            }
+            
+            /* Card styles */
+            .card-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+                gap: 20px;
+                padding: 20px;
+            }
+            .card {
+                background-color: #ffffff;
+                border-radius: 16px;
+                padding: 20px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                transition: transform 0.3s ease-in-out;
+            }
+            .card:hover {
+                transform: translateY(-10px);
+            }
+            .card-icon {
+                font-size: 50px;
+                color: #0052cc;
+            }
+            .card-title {
+                font-size: 20px;
+                margin: 10px 0;
+            }
+            .card-content {
+                font-size: 14px;
+                color: #666;
+            }
+            .hidden {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>    
+        <section class="card-container">
+            <!-- Savings Card -->
+            <a href="/savings" class="card">
+                <i class="card-icon fa fa-piggy-bank" aria-hidden="true"></i>
+                <h3 class="card-title">Savings</h3>
+                <p class="card-content">See how we can help you save. Start with as little as $25.</p>
+            </a>
+            <!-- Checking -->
+            <a href="/checking" class="card">
+                <i class="card-icon fas fa-money-check" aria-hidden="true"></i>
+                <h3 class="card-title">Checkings</h3>
+                <p class="card-content">Get paid up to 2 days early</p>
+            </a>            
+            <!-- Credit Cards Card -->
+            <a href="/credit_card" class="card">
+                <i class="card-icon fa fa-credit-card" aria-hidden="true"></i>
+                <h3 class="card-title">Credit Cards</h3>
+                <p class="card-content">Explore our cash back, points, and secured cards.</p>
+            </a>
+    
+            <!-- Rewards -->
+            <a href="/rewards" class="card">
+                <i class="card-icon fas fa-plane" aria-hidden="true"></i>
+                <h3 class="card-title">Rewards</h3>
+                <p class="card-content">Use your points.</p>
+            </a>
+            <!-- Transfer -->
+            <a href="/transfer" class="card">
+            <i class="card-icon fas fa-money-check" aria-hidden="true"></i>
+            <h3 class="card-title">Transfer</h3>
+            <p class="card-content">Transfer between accounts.</p>
+        </a>            
+    </section>
+</head>
+    {% endblock %}

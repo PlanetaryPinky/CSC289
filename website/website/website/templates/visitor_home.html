@@ -1,0 +1,148 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+    %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Banking Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa;
+            color: #333;
+        }
+        
+        /* Card styles */
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+        }
+        .card-icon {
+            font-size: 50px;
+            color: #0052cc;
+        }
+        .card-title {
+            font-size: 20px;
+            margin: 10px 0;
+        }
+        .card-content {
+            font-size: 14px;
+            color: #666;
+        }
+        .learn-more {
+            text-decoration: none;
+            color: #0052cc;
+            font-weight: bold;
+            transition: color 0.3s ease-in-out;
+        }
+        .learn-more:hover {
+            color: #003f8c;
+        }
+        .hidden {
+            display: none;
+        }
+
+        /* Additional styles for expanded text */
+        .expanded-text {
+            padding: 10px;
+            margin-top: 15px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+    </style>
+</head>
+<body>    
+    <section class="card-container">
+        <!-- Checking Card -->
+        <div class="card">
+            <i class="card-icon fa fa-university" aria-hidden="true"></i>
+            <h3 class="card-title">Checking</h3>
+            <p class="card-content">Skip hidden and monthly service fees.</p>
+            <button onclick="toggleText('checking-more')" class="learn-more">Learn more</button>
+            <div id="checking-more" class="expanded-text hidden">
+                Enjoy no monthly fees and easy online access with our checking accounts. Perfect for everyday banking.
+            </div>
+        </div>
+        
+        <!-- Credit Cards Card -->
+        <div class="card">
+            <i class="card-icon fa fa-credit-card" aria-hidden="true"></i>
+            <h3 class="card-title">Credit Cards</h3>
+            <p class="card-content">Explore our cash back, points, and secured cards.</p>
+            <button onclick="toggleText('credit-more')" class="learn-more">Learn more</button>
+            <div id="credit-more" class="expanded-text hidden">
+                From rewards to low APR, find the card that’s right for you and start earning points today.
+            </div>
+        </div>
+
+        <!-- Auto Loans Card -->
+        <div class="card">
+            <i class="card-icon fa fa-car" aria-hidden="true"></i>
+            <h3 class="card-title">Auto Loans</h3>
+            <p class="card-content">Let us help make buying your next car easier.</p>
+            <button onclick="toggleText('auto-more')" class="learn-more">Learn more</button>
+            <div id="auto-more" class="expanded-text hidden">
+                Competitive rates and quick approval times for new and used vehicle loans.
+            </div>
+        </div>
+        
+        <!-- Home Mortgages Card -->
+        <div class="card">
+            <i class="card-icon fa fa-home" aria-hidden="true"></i>
+            <h3 class="card-title">Home Mortgages</h3>
+            <p class="card-content">Let us help you with your home purchase or refinance.</p>
+            <button onclick="toggleText('mortgage-more')" class="learn-more">Learn more</button>
+            <div id="mortgage-more" class="expanded-text hidden">
+                Our mortgage options come with competitive rates and personalized service.
+            </div>
+        </div>
+
+        <!-- Personal Loans Card -->
+        <div class="card">
+            <i class="card-icon fa fa-hand-holding-usd" aria-hidden="true"></i>
+            <h3 class="card-title">Personal Loans</h3>
+            <p class="card-content">Get access to the money you need with flexible terms.</p>
+            <button onclick="toggleText('personal-more')" class="learn-more">Learn more</button>
+            <div id="personal-more" class="expanded-text hidden">
+                Find a loan that fits your needs, with fixed rates and no origination fees.
+            </div>
+        </div>
+        
+        <!-- Savings Card -->
+        <div class="card">
+            <i class="card-icon fa fa-piggy-bank" aria-hidden="true"></i>
+            <h3 class="card-title">Savings</h3>
+            <p class="card-content">See how we can help you save. Start with as little as $25.</p>
+            <button onclick="toggleText('savings-more')" class="learn-more">Learn more</button>
+            <div id="savings-more" class="expanded-text hidden">
+                Our savings accounts offer competitive interest rates and easy access to your funds.
+        </div>
+</section>
+<script>
+    function toggleText(id) {
+        var text = document.getElementById(id);
+        if (text.style.display === "none") {
+            text.style.display = "block";
+        } else {
+            text.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>
+
+    {% endblock %}
